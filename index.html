@@ -22,6 +22,7 @@
             --branco: #ffffff;
             --gelo: #f8f9fa;
             --insta: #E1306C;
+            --whatsapp: #25d366;
         }
 
         body {
@@ -33,7 +34,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Cabeçalho Profissional */
         header {
             background: linear-gradient(rgba(240, 113, 81, 0.9), rgba(240, 113, 81, 0.9)), 
                         url('https://images.unsplash.com/photo-1548625361-39593297f642?auto=format&fit=crop&q=80&w=1000');
@@ -69,7 +69,6 @@
             margin: 0;
         }
 
-        /* Menu de Navegação */
         .nav-tabs {
             max-width: 600px;
             margin: -35px auto 0;
@@ -101,7 +100,6 @@
             color: white;
         }
 
-        /* Conteúdo */
         .container {
             max-width: 700px;
             margin: 40px auto;
@@ -126,12 +124,6 @@
 
         h2 { color: var(--laranja); border-bottom: 2px solid var(--gelo); padding-bottom: 10px; }
 
-        /* Estilo Lista de Vantagens */
-        .vantagens { list-style: none; padding: 0; }
-        .vantagens li { margin-bottom: 15px; display: flex; align-items: center; }
-        .vantagens i { color: #2ecc71; margin-right: 15px; font-size: 1.2rem; }
-
-        /* Datas em Destaque */
         .data-box {
             display: flex;
             justify-content: space-around;
@@ -145,13 +137,15 @@
         .data-label { display: block; font-size: 0.8rem; color: var(--laranja); font-weight: bold; text-transform: uppercase; }
         .data-valor { font-size: 1.2rem; font-weight: 700; color: var(--azul-escuro); }
 
-        /* Formulário */
+        .vantagens { list-style: none; padding: 0; }
+        .vantagens li { margin-bottom: 15px; display: flex; align-items: center; }
+        .vantagens i { color: #2ecc71; margin-right: 15px; font-size: 1.2rem; }
+
         .form-group { margin-bottom: 20px; }
         label { display: block; margin-bottom: 8px; font-weight: 600; }
-        input, select, textarea {
-            width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 12px; font-family: inherit; transition: 0.3s;
+        input, select {
+            width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 12px; font-family: inherit;
         }
-        input:focus { border-color: var(--laranja); outline: none; }
 
         .btn-acao {
             width: 100%; background: var(--laranja); color: white; border: none; padding: 18px;
@@ -160,25 +154,27 @@
         }
         .btn-acao:hover { background: var(--laranja-escuro); transform: scale(1.02); }
 
+        .btn-whatsapp-form {
+            background-color: var(--whatsapp);
+        }
+
         .btn-insta {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             margin-top: 20px;
         }
 
-        /* Botão Flutuante WhatsApp */
         .whats-float {
             position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
-            background-color: #25d366; color: white; border-radius: 50px; text-align: center;
+            background-color: var(--whatsapp); color: white; border-radius: 50px; text-align: center;
             font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000;
             display: flex; align-items: center; justify-content: center; text-decoration: none;
         }
 
-        /* FAQ */
         details { background: var(--gelo); padding: 15px; border-radius: 10px; margin-bottom: 10px; cursor: pointer; }
         summary { font-weight: 600; }
 
         footer { text-align: center; padding: 50px 20px; color: #aaa; font-size: 0.9rem; }
-        .social-link-footer { color: var(--insta); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+        .social-link-footer { color: var(--insta); text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -202,8 +198,6 @@
     <!-- ABA 1: INFORMAÇÕES -->
     <section id="info" class="card active">
         <h2>🙏 Próxima Romaria</h2>
-        <p>Junte-se a nós para o <strong>Santuário do Bom Jesus da Lapa</strong>. Confira a data da nossa próxima saída:</p>
-        
         <div class="data-box">
             <div class="data-item">
                 <span class="data-label">Saída</span>
@@ -217,50 +211,42 @@
         </div>
 
         <ul class="vantagens">
-            <li><i class="fas fa-check-circle"></i> Ônibus Leito com Ar-Condicionado e Wi-fi</li>
-            <li><i class="fas fa-check-circle"></i> Hospedagem com café da manhã e jantar</li>
+            <li><i class="fas fa-check-circle"></i> Ônibus Leito com Ar-Condicionado</li>
+            <li><i class="fas fa-check-circle"></i> Hospedagem com café e jantar</li>
             <li><i class="fas fa-check-circle"></i> Guia religioso e momentos de oração</li>
         </ul>
         
         <p style="text-align: center; font-style: italic; margin-top: 30px; color: var(--laranja);">"Fé que une, caminhada que transforma."</p>
 
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
-        
-        <p style="text-align: center; font-weight: 600;">Acompanhe nossas viagens pelo Instagram:</p>
-        <!-- LINK CORRIGIDO AQUI -->
-        <a href="https://www.instagram.com/romarias.padremazinho/" target="_blank" rel="noopener noreferrer" class="btn-acao btn-insta">
+        <a href="https://www.instagram.com/romarias.padremazinho/" target="_blank" class="btn-acao btn-insta">
             <i class="fab fa-instagram"></i> Ver Fotos no Instagram
         </a>
     </section>
 
-    <!-- ABA 2: FORMULÁRIO -->
+    <!-- ABA 2: INSCRIÇÃO VIA WHATSAPP (GRÁTIS E ILIMITADO) -->
     <section id="inscricao" class="card">
-        <h2>📝 Reserve sua Vaga</h2>
-        <p>Preencha os campos abaixo para a romaria de <strong>16 a 20 de Julho</strong>.</p>
+        <h2>📝 Ficha de Inscrição</h2>
+        <p>Preencha os dados e clique em enviar para nos mandar sua reserva pelo WhatsApp.</p>
         
-        <form action="https://formspree.io/f/xnjbngjp" method="POST">
-            <div class="form-group">
-                <label>Nome Completo</label>
-                <input type="text" name="nome" placeholder="Seu nome" required>
-            </div>
-            <div class="form-group">
-                <label>Seu WhatsApp (com DDD)</label>
-                <input type="tel" name="whatsapp" placeholder="(38) 99999-9999" required>
-            </div>
-            <div class="form-group">
-                <label>Cidade</label>
-                <input type="text" name="cidade" placeholder="Onde você mora?" required>
-            </div>
-            <div class="form-group">
-                <label>Quantas vagas deseja?</label>
-                <select name="vagas">
-                    <option value="1">1 Vaga</option>
-                    <option value="2">2 Vagas</option>
-                    <option value="3+">3 ou mais Vagas</option>
-                </select>
-            </div>
-            <button type="submit" class="btn-acao">QUERO ME INSCREVER</button>
-        </form>
+        <div class="form-group">
+            <label>Seu Nome Completo</label>
+            <input type="text" id="nome_form" placeholder="Ex: Maria Souza" required>
+        </div>
+        <div class="form-group">
+            <label>Sua Cidade</label>
+            <input type="text" id="cidade_form" placeholder="Onde você mora?" required>
+        </div>
+        <div class="form-group">
+            <label>Quantas vagas?</label>
+            <select id="vagas_form">
+                <option value="1 vaga">1 Vaga</option>
+                <option value="2 vagas">2 Vagas</option>
+                <option value="3 ou mais vagas">3 ou mais Vagas</option>
+            </select>
+        </div>
+        <button onclick="enviarWhatsapp()" class="btn-acao btn-whatsapp-form">
+            <i class="fab fa-whatsapp"></i> ENVIAR INSCRIÇÃO AGORA
+        </button>
     </section>
 
     <!-- ABA 3: FAQ -->
@@ -268,35 +254,24 @@
         <h2>❓ Perguntas Frequentes</h2>
         <details>
             <summary>O que levar na viagem?</summary>
-            <p style="padding:10px">Recomendamos roupas confortáveis, protetor solar, documentos originais e, claro, muita fé!</p>
+            <p style="padding:10px">Roupas confortáveis, protetor solar, documentos e sua devoção.</p>
         </details>
         <details>
-            <summary>Quais as formas de pagamento?</summary>
-            <p style="padding:10px">Aceitamos pagamento via PIX, transferência ou parcelamento no cartão de crédito diretamente conosco.</p>
-        </details>
-        <details>
-            <summary>Crianças podem ir?</summary>
-            <p style="padding:10px">Sim, crianças são muito bem-vindas em nossas romarias acompanhadas pelos pais.</p>
+            <summary>Como pagar?</summary>
+            <p style="padding:10px">Aceitamos PIX ou Cartão de Crédito.</p>
         </details>
     </section>
-
 </div>
 
-<!-- WhatsApp Flutuante -->
 <a href="https://wa.me/5538999648992" class="whats-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
     <strong>Romarias Padre Mazinho</strong><br>
-    Fé que une, caminhada que transforma.<br><br>
-    
-    <!-- LINK CORRIGIDO AQUI TAMBÉM -->
-    <a href="https://www.instagram.com/romarias.padremazinho/" target="_blank" rel="noopener noreferrer" class="social-link-footer">
+    <a href="https://www.instagram.com/romarias.padremazinho/" target="_blank" class="social-link-footer">
         <i class="fab fa-instagram"></i> @romarias.padremazinho
-    </a>
-    
-    <br><br>
+    </a><br><br>
     Bom Jesus da Lapa - Bahia | 2024
 </footer>
 
@@ -304,11 +279,26 @@
     function showTab(id) {
         document.querySelectorAll('.card').forEach(card => card.classList.remove('active'));
         document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-        
         document.getElementById(id).classList.add('active');
-        if(event) event.currentTarget.classList.add('active');
-        
+        event.currentTarget.classList.add('active');
         window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // FUNÇÃO QUE ENVIA OS DADOS PARA O SEU WHATSAPP
+    function enviarWhatsapp() {
+        const nome = document.getElementById('nome_form').value;
+        const cidade = document.getElementById('cidade_form').value;
+        const vagas = document.getElementById('vagas_form').value;
+
+        if(!nome || !cidade) {
+            alert("Por favor, preencha o nome e a cidade.");
+            return;
+        }
+
+        const mensagem = `Olá Padre Mazinho! Quero me inscrever na Romaria de Julho.%0A%0A*Nome:* ${nome}%0A*Cidade:* ${cidade}%0A*Vagas:* ${vagas}`;
+        const link = `https://wa.me/5538999648992?text=${mensagem}`;
+        
+        window.open(link, '_blank');
     }
 </script>
 
