@@ -21,6 +21,7 @@
             --azul-escuro: #2c3e50;
             --branco: #ffffff;
             --gelo: #f8f9fa;
+            --insta: #E1306C;
         }
 
         body {
@@ -155,8 +156,14 @@
         .btn-acao {
             width: 100%; background: var(--laranja); color: white; border: none; padding: 18px;
             border-radius: 12px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: 0.3s;
+            text-decoration: none; display: block; text-align: center;
         }
         .btn-acao:hover { background: var(--laranja-escuro); transform: scale(1.02); }
+
+        .btn-insta {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            margin-top: 20px;
+        }
 
         /* Botão Flutuante WhatsApp */
         .whats-float {
@@ -171,6 +178,7 @@
         summary { font-weight: 600; }
 
         footer { text-align: center; padding: 50px 20px; color: #aaa; font-size: 0.9rem; }
+        .social-link-footer { color: var(--insta); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
     </style>
 </head>
 <body>
@@ -215,6 +223,13 @@
         </ul>
         
         <p style="text-align: center; font-style: italic; margin-top: 30px; color: var(--laranja);">"Fé que une, caminhada que transforma."</p>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+        
+        <p style="text-align: center; font-weight: 600;">Acompanhe nossas viagens pelo Instagram:</p>
+        <a href="https://www.instagram.com/romarias.padremazinho?igsh=MTloZjM2amxxYmpjbg==" target="_blank" class="btn-acao btn-insta">
+            <i class="fab fa-instagram"></i> Ver Fotos no Instagram
+        </a>
     </section>
 
     <!-- ABA 2: FORMULÁRIO -->
@@ -274,6 +289,12 @@
 <footer>
     <strong>Romarias Padre Mazinho</strong><br>
     Fé que une, caminhada que transforma.<br><br>
+    
+    <a href="https://www.instagram.com/romarias.padremazinho?igsh=MTloZjM2amxxYmpjbg==" target="_blank" class="social-link-footer">
+        <i class="fab fa-instagram"></i> @romarias.padremazinho
+    </a>
+    
+    <br><br>
     Bom Jesus da Lapa - Bahia | 2024
 </footer>
 
