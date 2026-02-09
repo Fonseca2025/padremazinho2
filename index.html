@@ -22,13 +22,12 @@
             --branco: #ffffff;
             --gelo: #f8f9fa;
             --insta: #E1306C;
-            --whatsapp: #25d366;
+            --google: #4285F4;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             background-color: var(--gelo);
             color: var(--azul-escuro);
             scroll-behavior: smooth;
@@ -55,19 +54,13 @@
         }
 
         .img-perfil {
-            width: 70px;
-            height: 70px;
+            width: 70px; height: 70px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--laranja);
         }
 
-        .texto-topo {
-            color: var(--laranja);
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin: 0;
-        }
+        .texto-topo { color: var(--laranja); font-size: 1.6rem; font-weight: 700; margin: 0; }
 
         .nav-tabs {
             max-width: 600px;
@@ -77,41 +70,22 @@
             border-radius: 50px;
             padding: 5px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 10px;
-            z-index: 100;
+            position: sticky; top: 10px; z-index: 100;
         }
 
         .nav-btn {
-            flex: 1;
-            border: none;
-            background: none;
-            padding: 15px;
-            border-radius: 40px;
-            cursor: pointer;
-            font-weight: 600;
-            color: #777;
-            transition: 0.3s;
-            font-family: inherit;
+            flex: 1; border: none; background: none; padding: 15px;
+            border-radius: 40px; cursor: pointer;
+            font-weight: 600; color: #777; transition: 0.3s;
         }
 
-        .nav-btn.active {
-            background: var(--laranja);
-            color: white;
-        }
+        .nav-btn.active { background: var(--laranja); color: white; }
 
-        .container {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 700px; margin: 40px auto; padding: 0 20px; }
 
         .card {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
+            background: white; padding: 30px; border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 30px;
             display: none;
         }
 
@@ -125,56 +99,28 @@
         h2 { color: var(--laranja); border-bottom: 2px solid var(--gelo); padding-bottom: 10px; }
 
         .data-box {
-            display: flex;
-            justify-content: space-around;
-            background: #fff4f1;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            border: 1px dashed var(--laranja);
-        }
-        .data-item { text-align: center; }
-        .data-label { display: block; font-size: 0.8rem; color: var(--laranja); font-weight: bold; text-transform: uppercase; }
-        .data-valor { font-size: 1.2rem; font-weight: 700; color: var(--azul-escuro); }
-
-        .vantagens { list-style: none; padding: 0; }
-        .vantagens li { margin-bottom: 15px; display: flex; align-items: center; }
-        .vantagens i { color: #2ecc71; margin-right: 15px; font-size: 1.2rem; }
-
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: 600; }
-        input, select {
-            width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 12px; font-family: inherit;
+            display: flex; justify-content: space-around;
+            background: #fff4f1; padding: 20px; border-radius: 15px;
+            margin-bottom: 25px; border: 1px dashed var(--laranja);
         }
 
         .btn-acao {
             width: 100%; background: var(--laranja); color: white; border: none; padding: 18px;
-            border-radius: 12px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: 0.3s;
-            text-decoration: none; display: block; text-align: center;
-        }
-        .btn-acao:hover { background: var(--laranja-escuro); transform: scale(1.02); }
-
-        .btn-whatsapp-form {
-            background-color: var(--whatsapp);
+            border-radius: 12px; font-weight: bold; font-size: 1.1rem; cursor: pointer;
+            text-decoration: none; display: block; text-align: center; box-sizing: border-box;
         }
 
-        .btn-insta {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            margin-top: 20px;
-        }
+        .btn-google { background-color: var(--google); margin-top: 20px; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); margin-top: 20px; }
 
         .whats-float {
             position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
-            background-color: var(--whatsapp); color: white; border-radius: 50px; text-align: center;
+            background-color: #25d366; color: white; border-radius: 50px;
+            display: flex; align-items: center; justify-content: center;
             font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000;
-            display: flex; align-items: center; justify-content: center; text-decoration: none;
         }
 
-        details { background: var(--gelo); padding: 15px; border-radius: 10px; margin-bottom: 10px; cursor: pointer; }
-        summary { font-weight: 600; }
-
         footer { text-align: center; padding: 50px 20px; color: #aaa; font-size: 0.9rem; }
-        .social-link-footer { color: var(--insta); text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -184,13 +130,11 @@
         <img src="perfil.jpeg" alt="Padre Mazinho" class="img-perfil">
         <h1 class="texto-topo">Padre Mazinho</h1>
     </div>
-    <p style="margin-top:20px; font-size: 1.1rem; opacity: 0.9;">Missão, Fé e Devoção no caminho ao Bom Jesus.</p>
 </header>
 
 <nav class="nav-tabs">
     <button class="nav-btn active" onclick="showTab('info')">Informações</button>
-    <button class="nav-btn" onclick="showTab('inscricao')">Inscrições</button>
-    <button class="nav-btn" onclick="showTab('duvidas')">Dúvidas</button>
+    <button class="nav-btn" onclick="showTab('inscricao')">Inscrição</button>
 </nav>
 
 <div class="container">
@@ -199,68 +143,31 @@
     <section id="info" class="card active">
         <h2>🙏 Próxima Romaria</h2>
         <div class="data-box">
-            <div class="data-item">
-                <span class="data-label">Saída</span>
-                <span class="data-valor">16 de Julho</span>
-            </div>
-            <div style="font-size: 1.5rem; color: var(--laranja); display: flex; align-items: center;">➔</div>
-            <div class="data-item">
-                <span class="data-label">Retorno</span>
-                <span class="data-valor">20 de Julho</span>
-            </div>
+            <div><strong>Saída:</strong> 16 de Julho</div>
+            <div><strong>Retorno:</strong> 20 de Julho</div>
         </div>
-
-        <ul class="vantagens">
-            <li><i class="fas fa-check-circle"></i> Ônibus Leito com Ar-Condicionado</li>
-            <li><i class="fas fa-check-circle"></i> Hospedagem com café e jantar</li>
-            <li><i class="fas fa-check-circle"></i> Guia religioso e momentos de oração</li>
-        </ul>
+        <p>Bom Jesus da Lapa - BA. Ônibus confortável, hospedagem e acompanhamento espiritual.</p>
         
-        <p style="text-align: center; font-style: italic; margin-top: 30px; color: var(--laranja);">"Fé que une, caminhada que transforma."</p>
-
         <a href="https://www.instagram.com/romarias.padremazinho/" target="_blank" class="btn-acao btn-insta">
             <i class="fab fa-instagram"></i> Ver Fotos no Instagram
         </a>
     </section>
 
-    <!-- ABA 2: INSCRIÇÃO VIA WHATSAPP (GRÁTIS E ILIMITADO) -->
+    <!-- ABA 2: INSCRIÇÃO VIA GOOGLE FORMS -->
     <section id="inscricao" class="card">
-        <h2>📝 Ficha de Inscrição</h2>
-        <p>Preencha os dados e clique em enviar para nos mandar sua reserva pelo WhatsApp.</p>
+        <h2>📝 Faça sua Inscrição</h2>
+        <p>Clique no botão abaixo para preencher o formulário oficial de reserva de vagas pelo Google.</p>
         
-        <div class="form-group">
-            <label>Seu Nome Completo</label>
-            <input type="text" id="nome_form" placeholder="Ex: Maria Souza" required>
-        </div>
-        <div class="form-group">
-            <label>Sua Cidade</label>
-            <input type="text" id="cidade_form" placeholder="Onde você mora?" required>
-        </div>
-        <div class="form-group">
-            <label>Quantas vagas?</label>
-            <select id="vagas_form">
-                <option value="1 vaga">1 Vaga</option>
-                <option value="2 vagas">2 Vagas</option>
-                <option value="3 ou mais vagas">3 ou mais Vagas</option>
-            </select>
-        </div>
-        <button onclick="enviarWhatsapp()" class="btn-acao btn-whatsapp-form">
-            <i class="fab fa-whatsapp"></i> ENVIAR INSCRIÇÃO AGORA
-        </button>
+        <!-- COLOQUE O LINK DO SEU GOOGLE FORMS AQUI ABAIXO -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK3uiWHzXCcXrCuJ9Nmfp0JnCwC3zic1best0CsbYFoLO9Yw/viewform?usp=publish-editor" target="_blank" class="btn-acao btn-google">
+            <i class="fab fa-google"></i> ABRIR FORMULÁRIO DE INSCRIÇÃO
+        </a>
+
+        <p style="margin-top: 20px; font-size: 0.9rem; text-align: center; color: #777;">
+            Ao clicar, uma nova aba será aberta para você preencher seus dados com segurança.
+        </p>
     </section>
 
-    <!-- ABA 3: FAQ -->
-    <section id="duvidas" class="card">
-        <h2>❓ Perguntas Frequentes</h2>
-        <details>
-            <summary>O que levar na viagem?</summary>
-            <p style="padding:10px">Roupas confortáveis, protetor solar, documentos e sua devoção.</p>
-        </details>
-        <details>
-            <summary>Como pagar?</summary>
-            <p style="padding:10px">Aceitamos PIX ou Cartão de Crédito.</p>
-        </details>
-    </section>
 </div>
 
 <a href="https://wa.me/5538999648992" class="whats-float" target="_blank">
@@ -269,9 +176,6 @@
 
 <footer>
     <strong>Romarias Padre Mazinho</strong><br>
-    <a href="https://www.instagram.com/romarias.padremazinho/" target="_blank" class="social-link-footer">
-        <i class="fab fa-instagram"></i> @romarias.padremazinho
-    </a><br><br>
     Bom Jesus da Lapa - Bahia | 2024
 </footer>
 
@@ -282,23 +186,6 @@
         document.getElementById(id).classList.add('active');
         event.currentTarget.classList.add('active');
         window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-
-    // FUNÇÃO QUE ENVIA OS DADOS PARA O SEU WHATSAPP
-    function enviarWhatsapp() {
-        const nome = document.getElementById('nome_form').value;
-        const cidade = document.getElementById('cidade_form').value;
-        const vagas = document.getElementById('vagas_form').value;
-
-        if(!nome || !cidade) {
-            alert("Por favor, preencha o nome e a cidade.");
-            return;
-        }
-
-        const mensagem = `Olá Padre Mazinho! Quero me inscrever na Romaria de Julho.%0A%0A*Nome:* ${nome}%0A*Cidade:* ${cidade}%0A*Vagas:* ${vagas}`;
-        const link = `https://wa.me/5538999648992?text=${mensagem}`;
-        
-        window.open(link, '_blank');
     }
 </script>
 
