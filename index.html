@@ -130,6 +130,20 @@
         .vantagens li { margin-bottom: 15px; display: flex; align-items: center; }
         .vantagens i { color: #2ecc71; margin-right: 15px; font-size: 1.2rem; }
 
+        /* Datas em Destaque */
+        .data-box {
+            display: flex;
+            justify-content: space-around;
+            background: #fff4f1;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border: 1px dashed var(--laranja);
+        }
+        .data-item { text-align: center; }
+        .data-label { display: block; font-size: 0.8rem; color: var(--laranja); font-weight: bold; text-transform: uppercase; }
+        .data-valor { font-size: 1.2rem; font-weight: 700; color: var(--azul-escuro); }
+
         /* Depoimentos */
         .depoimento {
             background: var(--gelo);
@@ -190,8 +204,21 @@
     <!-- ABA 1: INFORMAÇÕES -->
     <section id="info" class="card active">
         <h2>🙏 Próxima Romaria</h2>
-        <p>Junte-se a nós em uma jornada de profunda renovação espiritual para o <strong>Santuário do Bom Jesus da Lapa</strong>.</p>
+        <p>Junte-se a nós para o <strong>Santuário do Bom Jesus da Lapa</strong>. Confira a data da nossa próxima saída:</p>
         
+        <!-- Bloco de Datas Adicionado -->
+        <div class="data-box">
+            <div class="data-item">
+                <span class="data-label">Saída</span>
+                <span class="data-valor">16 de Julho</span>
+            </div>
+            <div style="font-size: 1.5rem; color: var(--laranja); display: flex; align-items: center;">➔</div>
+            <div class="data-item">
+                <span class="data-label">Retorno</span>
+                <span class="data-valor">20 de Julho</span>
+            </div>
+        </div>
+
         <ul class="vantagens">
             <li><i class="fas fa-check-circle"></i> Ônibus Leito com Ar-Condicionado e Wi-fi</li>
             <li><i class="fas fa-check-circle"></i> Hospedagem com café da manhã e jantar</li>
@@ -203,16 +230,12 @@
             "Uma experiência maravilhosa. O Padre Mazinho conduz a viagem com muita paz e carinho. Recomendo a todos!"
             <br><small><strong>- Maria das Graças, Montes Claros</strong></small>
         </div>
-        <div class="depoimento">
-            "Tudo muito organizado. A romaria renovou minhas energias e minha fé."
-            <br><small><strong>- José Antônio, Januária</strong></small>
-        </div>
     </section>
 
     <!-- ABA 2: FORMULÁRIO -->
     <section id="inscricao" class="card">
         <h2>📝 Reserve sua Vaga</h2>
-        <p>Preencha os campos abaixo e entraremos em contato para confirmar sua participação.</p>
+        <p>Preencha os campos abaixo para a romaria de <strong>16 a 20 de Julho</strong>.</p>
         
         <form action="https://formspree.io/f/xnjbngjp" method="POST">
             <div class="form-group">
@@ -250,10 +273,6 @@
             <summary>Quais as formas de pagamento?</summary>
             <p style="padding:10px">Aceitamos pagamento via PIX, transferência ou parcelamento no cartão de crédito.</p>
         </details>
-        <details>
-            <summary>Crianças podem ir?</summary>
-            <p style="padding:10px">Sim, crianças são muito bem-vindas em nossas romarias acompanhadas pelos pais.</p>
-        </details>
     </section>
 
 </div>
@@ -275,7 +294,7 @@
         document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
         
         document.getElementById(id).classList.add('active');
-        event.currentTarget.classList.add('active');
+        if(event) event.currentTarget.classList.add('active');
         
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
