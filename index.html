@@ -35,7 +35,7 @@
         /* Cabeçalho Profissional */
         header {
             background: linear-gradient(rgba(240, 113, 81, 0.9), rgba(240, 113, 81, 0.9)), 
-                        url('https://images.unsplash.com/photo-1548625361-39593297f642?auto=format&fit=crop&q=80&w=1000'); /* Imagem de fundo religiosa */
+                        url('https://images.unsplash.com/photo-1548625361-39593297f642?auto=format&fit=crop&q=80&w=1000');
             background-size: cover;
             background-position: center;
             padding: 60px 20px 80px;
@@ -196,7 +196,6 @@
             <li><i class="fas fa-check-circle"></i> Ônibus Leito com Ar-Condicionado e Wi-fi</li>
             <li><i class="fas fa-check-circle"></i> Hospedagem com café da manhã e jantar</li>
             <li><i class="fas fa-check-circle"></i> Guia religioso e momentos de oração</li>
-            <li><i class="fas fa-check-circle"></i> Seguro viagem incluso</li>
         </ul>
 
         <h2 style="margin-top:40px">⭐ O que dizem os fiéis</h2>
@@ -272,17 +271,12 @@
 
 <script>
     function showTab(id) {
-        // Esconder todos os cards
         document.querySelectorAll('.card').forEach(card => card.classList.remove('active'));
-        // Desativar todos os botões
         document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
         
-        // Mostrar o card selecionado
         document.getElementById(id).classList.add('active');
-        // Ativar o botão clicado
         event.currentTarget.classList.add('active');
         
-        // Rolar para o topo suavemente
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 </script>
