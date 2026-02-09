@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romarias Padre Mazinho | Fé e Caminhada</title>
     
-    <!-- Metas para Redes Sociais -->
-    <meta property="og:title" content="Romarias Padre Mazinho">
-    <meta property="og:description" content="Participe de nossas romarias para Bom Jesus da Lapa. Fé, conforto e espiritualidade.">
-    <meta property="og:image" content="perfil.jpeg">
-
     <!-- Fontes e Ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -17,12 +12,9 @@
     <style>
         :root {
             --laranja: #f07151;
-            --laranja-escuro: #d85d3f;
+            --verde: #2ecc71;
             --azul-escuro: #2c3e50;
-            --branco: #ffffff;
             --gelo: #f8f9fa;
-            --insta: #E1306C;
-            --google: #4285F4;
         }
 
         body {
@@ -33,14 +25,11 @@
             scroll-behavior: smooth;
         }
 
+        /* Cabeçalho */
         header {
-            background: linear-gradient(rgba(240, 113, 81, 0.9), rgba(240, 113, 81, 0.9)), 
-                        url('https://images.unsplash.com/photo-1548625361-39593297f642?auto=format&fit=crop&q=80&w=1000');
-            background-size: cover;
-            background-position: center;
+            background-color: var(--laranja);
             padding: 60px 20px 80px;
             text-align: center;
-            color: white;
         }
 
         .capsula-topo {
@@ -62,12 +51,13 @@
 
         .texto-topo { color: var(--laranja); font-size: 1.6rem; font-weight: 700; margin: 0; }
 
+        /* Menu de Navegação - IGUAL AO PRINT */
         .nav-tabs {
-            max-width: 600px;
+            max-width: 650px;
             margin: -35px auto 0;
             display: flex;
             background: white;
-            border-radius: 50px;
+            border-radius: 40px;
             padding: 5px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             position: sticky; top: 10px; z-index: 100;
@@ -75,52 +65,78 @@
 
         .nav-btn {
             flex: 1; border: none; background: none; padding: 15px;
-            border-radius: 40px; cursor: pointer;
+            border-radius: 35px; cursor: pointer;
             font-weight: 600; color: #777; transition: 0.3s;
+            font-family: inherit; font-size: 0.95rem;
         }
 
         .nav-btn.active { background: var(--laranja); color: white; }
 
+        /* Container de Conteúdo */
         .container { max-width: 700px; margin: 40px auto; padding: 0 20px; }
 
         .card {
-            background: white; padding: 30px; border-radius: 20px;
+            background: white; padding: 40px; border-radius: 25px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 30px;
             display: none;
         }
 
-        .card.active { display: block; animation: fadeInUp 0.5s ease; }
+        .card.active { display: block; animation: fadeInUp 0.4s ease; }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        h2 { color: var(--laranja); border-bottom: 2px solid var(--gelo); padding-bottom: 10px; }
+        h2 { color: var(--laranja); font-size: 1.8rem; margin-top: 0; display: flex; align-items: center; gap: 10px; }
 
+        /* Estilo da Caixa de Datas - IGUAL AO PRINT */
         .data-box {
-            display: flex; justify-content: space-around;
-            background: #fff4f1; padding: 20px; border-radius: 15px;
-            margin-bottom: 25px; border: 1px dashed var(--laranja);
+            display: flex; justify-content: space-around; align-items: center;
+            background: #fffafa; padding: 30px 20px; border-radius: 15px;
+            margin: 30px 0; border: 1.5px dashed #f8a18a;
         }
 
+        .data-item { text-align: center; }
+        .data-label { font-size: 0.75rem; color: #f8a18a; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+        .data-valor { font-size: 1.3rem; font-weight: 700; color: #2c3e50; }
+        .data-seta { color: var(--laranja); font-size: 1.5rem; }
+
+        /* Checklist - IGUAL AO PRINT */
+        .vantagens { list-style: none; padding: 0; margin: 30px 0; }
+        .vantagens li { margin-bottom: 15px; display: flex; align-items: center; font-size: 1rem; color: #555; }
+        .vantagens i { color: var(--verde); margin-right: 12px; font-size: 1.2rem; }
+
+        /* Slogan e Separador */
+        .slogan { text-align: center; font-style: italic; color: #f8a18a; margin: 40px 0; font-size: 1.1rem; }
+        hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
+
+        /* Botões */
         .btn-acao {
-            width: 100%; background: var(--laranja); color: white; border: none; padding: 18px;
-            border-radius: 12px; font-weight: bold; font-size: 1.1rem; cursor: pointer;
-            text-decoration: none; display: block; text-align: center; box-sizing: border-box;
+            width: 100%; color: white; border: none; padding: 18px;
+            border-radius: 15px; font-weight: 700; font-size: 1.1rem; cursor: pointer;
+            text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;
+            transition: 0.3s; box-sizing: border-box;
         }
 
-        .btn-google { background-color: var(--google); margin-top: 20px; }
-        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); margin-top: 20px; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .btn-google { background-color: #4285F4; }
+        .btn-acao:hover { transform: scale(1.02); filter: brightness(1.1); }
 
+        /* WhatsApp Flutuante */
         .whats-float {
             position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
             background-color: #25d366; color: white; border-radius: 50px;
             display: flex; align-items: center; justify-content: center;
             font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000;
+            text-decoration: none;
         }
 
         footer { text-align: center; padding: 50px 20px; color: #aaa; font-size: 0.9rem; }
+
+        /* FAQ Estilo Acordeon */
+        details { background: var(--gelo); padding: 15px; border-radius: 12px; margin-bottom: 12px; cursor: pointer; }
+        summary { font-weight: 600; color: var(--azul-escuro); }
     </style>
 </head>
 <body>
@@ -132,40 +148,68 @@
     </div>
 </header>
 
+<!-- MENU DE ABAS IGUAL AO PRINT -->
 <nav class="nav-tabs">
     <button class="nav-btn active" onclick="showTab('info')">Informações</button>
-    <button class="nav-btn" onclick="showTab('inscricao')">Inscrição</button>
+    <button class="nav-btn" onclick="showTab('inscricao')">Inscrições</button>
+    <button class="nav-btn" onclick="showTab('duvidas')">Dúvidas</button>
 </nav>
 
 <div class="container">
     
-    <!-- ABA 1: INFORMAÇÕES -->
+    <!-- ABA 1: INFORMAÇÕES (IDÊNTICA AO PRINT) -->
     <section id="info" class="card active">
         <h2>🙏 Próxima Romaria</h2>
-        <div class="data-box">
-            <div><strong>Saída:</strong> 16 de Julho</div>
-            <div><strong>Retorno:</strong> 20 de Julho</div>
-        </div>
-        <p>Bom Jesus da Lapa - BA. Ônibus confortável, hospedagem e acompanhamento espiritual.</p>
+        <p style="line-height: 1.6; color: #555;">Junte-se a nós para o <strong>Santuário do Bom Jesus da Lapa</strong>. Confira a data da nossa próxima saída:</p>
         
+        <div class="data-box">
+            <div class="data-item">
+                <span class="data-label">SAÍDA</span>
+                <span class="data-valor">16 de Julho</span>
+            </div>
+            <div class="data-seta">➔</div>
+            <div class="data-item">
+                <span class="data-label">RETORNO</span>
+                <span class="data-valor">20 de Julho</span>
+            </div>
+        </div>
+
+        <ul class="vantagens">
+            <li><i class="fas fa-check-circle"></i> Ônibus Leito com Ar-Condicionado e Wi-fi</li>
+            <li><i class="fas fa-check-circle"></i> Hospedagem com café da manhã e jantar</li>
+            <li><i class="fas fa-check-circle"></i> Guia religioso e momentos de oração</li>
+        </ul>
+
+        <div class="slogan">"Fé que une, caminhada que transforma."</div>
+        
+        <hr>
+
+        <p style="text-align: center; font-weight: 700; color: #2c3e50; margin-bottom: 20px;">Acompanhe nossas viagens pelo Instagram:</p>
         <a href="https://www.instagram.com/romarias.padremazinho/" target="_blank" class="btn-acao btn-insta">
             <i class="fab fa-instagram"></i> Ver Fotos no Instagram
         </a>
     </section>
 
-    <!-- ABA 2: INSCRIÇÃO VIA GOOGLE FORMS -->
+    <!-- ABA 2: INSCRIÇÕES -->
     <section id="inscricao" class="card">
-        <h2>📝 Faça sua Inscrição</h2>
-        <p>Clique no botão abaixo para preencher o formulário oficial de reserva de vagas pelo Google.</p>
-        
-        <!-- COLOQUE O LINK DO SEU GOOGLE FORMS AQUI ABAIXO -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK3uiWHzXCcXrCuJ9Nmfp0JnCwC3zic1best0CsbYFoLO9Yw/viewform?usp=publish-editor" target="_blank" class="btn-acao btn-google">
+        <h2>📝 Inscrição Online</h2>
+        <p>Clique abaixo para abrir o formulário oficial de reserva:</p>
+        <a href="https://forms.gle/53L9C7BqC8m4D13A7" target="_blank" class="btn-acao btn-google">
             <i class="fab fa-google"></i> ABRIR FORMULÁRIO DE INSCRIÇÃO
         </a>
+    </section>
 
-        <p style="margin-top: 20px; font-size: 0.9rem; text-align: center; color: #777;">
-            Ao clicar, uma nova aba será aberta para você preencher seus dados com segurança.
-        </p>
+    <!-- ABA 3: DÚVIDAS -->
+    <section id="duvidas" class="card">
+        <h2>❓ Dúvidas Comuns</h2>
+        <details>
+            <summary>Como funciona o pagamento?</summary>
+            <p style="padding-top:10px">O pagamento pode ser feito via PIX ou Cartão de Crédito. Fale conosco pelo WhatsApp para detalhes.</p>
+        </details>
+        <details>
+            <summary>O que levar na mala?</summary>
+            <p style="padding-top:10px">Recomendamos roupas leves, protetor solar, documentos originais e remédios de uso contínuo.</p>
+        </details>
     </section>
 
 </div>
