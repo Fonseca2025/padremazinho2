@@ -51,7 +51,7 @@
 
         .texto-topo { color: var(--laranja); font-size: 1.6rem; font-weight: 700; margin: 0; }
 
-        /* Menu de Navegação - IGUAL AO PRINT */
+        /* Menu de Navegação - IDÊNTICO AO PRINT */
         .nav-tabs {
             max-width: 650px;
             margin: -35px auto 0;
@@ -90,7 +90,7 @@
 
         h2 { color: var(--laranja); font-size: 1.8rem; margin-top: 0; display: flex; align-items: center; gap: 10px; }
 
-        /* Estilo da Caixa de Datas - IGUAL AO PRINT */
+        /* Estilo da Caixa de Datas - IDÊNTICO AO PRINT */
         .data-box {
             display: flex; justify-content: space-around; align-items: center;
             background: #fffafa; padding: 30px 20px; border-radius: 15px;
@@ -102,7 +102,7 @@
         .data-valor { font-size: 1.3rem; font-weight: 700; color: #2c3e50; }
         .data-seta { color: var(--laranja); font-size: 1.5rem; }
 
-        /* Checklist - IGUAL AO PRINT */
+        /* Checklist - IDÊNTICO AO PRINT */
         .vantagens { list-style: none; padding: 0; margin: 30px 0; }
         .vantagens li { margin-bottom: 15px; display: flex; align-items: center; font-size: 1rem; color: #555; }
         .vantagens i { color: var(--verde); margin-right: 12px; font-size: 1.2rem; }
@@ -148,7 +148,6 @@
     </div>
 </header>
 
-<!-- MENU DE ABAS IGUAL AO PRINT -->
 <nav class="nav-tabs">
     <button class="nav-btn active" onclick="showTab('info')">Informações</button>
     <button class="nav-btn" onclick="showTab('inscricao')">Inscrições</button>
@@ -157,7 +156,7 @@
 
 <div class="container">
     
-    <!-- ABA 1: INFORMAÇÕES (IDÊNTICA AO PRINT) -->
+    <!-- ABA 1: INFORMAÇÕES -->
     <section id="info" class="card active">
         <h2>🙏 Próxima Romaria</h2>
         <p style="line-height: 1.6; color: #555;">Junte-se a nós para o <strong>Santuário do Bom Jesus da Lapa</strong>. Confira a data da nossa próxima saída:</p>
@@ -190,30 +189,41 @@
         </a>
     </section>
 
-    <!-- ABA 2: INSCRIÇÕES -->
+    <!-- ABA 2: INSCRIÇÕES (LINK ATUALIZADO) -->
     <section id="inscricao" class="card">
         <h2>📝 Inscrição Online</h2>
-        <p>Clique abaixo para abrir o formulário oficial de reserva:</p>
-        <a href="https://forms.gle/53L9C7BqC8m4D13A7" target="_blank" class="btn-acao btn-google">
+        <p style="color: #555; margin-bottom: 25px;">Clique no botão abaixo para preencher o formulário oficial e garantir sua reserva de vaga:</p>
+        
+        <!-- NOVO LINK DO GOOGLE FORMS ABAIXO -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK3uiWHzXCcXrCuJ9Nmfp0JnCwC3zic1best0CsbYFoLO9Yw/viewform?usp=header" target="_blank" class="btn-acao btn-google">
             <i class="fab fa-google"></i> ABRIR FORMULÁRIO DE INSCRIÇÃO
         </a>
+        
+        <p style="text-align: center; font-size: 0.85rem; color: #888; margin-top: 20px;">
+            <i class="fas fa-info-circle"></i> O formulário abrirá em uma nova janela de forma segura.
+        </p>
     </section>
 
     <!-- ABA 3: DÚVIDAS -->
     <section id="duvidas" class="card">
         <h2>❓ Dúvidas Comuns</h2>
         <details>
-            <summary>Como funciona o pagamento?</summary>
-            <p style="padding-top:10px">O pagamento pode ser feito via PIX ou Cartão de Crédito. Fale conosco pelo WhatsApp para detalhes.</p>
+            <summary>Como confirmo minha vaga?</summary>
+            <p style="padding-top:10px">Após preencher o formulário na aba "Inscrições", nossa equipe entrará em contato via WhatsApp para finalizar os detalhes.</p>
         </details>
         <details>
-            <summary>O que levar na mala?</summary>
-            <p style="padding-top:10px">Recomendamos roupas leves, protetor solar, documentos originais e remédios de uso contínuo.</p>
+            <summary>Quais as formas de pagamento?</summary>
+            <p style="padding-top:10px">Aceitamos PIX, transferência bancária ou parcelamento no cartão de crédito.</p>
+        </details>
+        <details>
+            <summary>O que está incluso no pacote?</summary>
+            <p style="padding-top:10px">Transporte em ônibus leito, hospedagem com pensão completa (café e jantar) e acompanhamento do Padre Mazinho.</p>
         </details>
     </section>
 
 </div>
 
+<!-- WhatsApp Flutuante -->
 <a href="https://wa.me/5538999648992" class="whats-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
@@ -228,7 +238,7 @@
         document.querySelectorAll('.card').forEach(card => card.classList.remove('active'));
         document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
         document.getElementById(id).classList.add('active');
-        event.currentTarget.classList.add('active');
+        if(event) event.currentTarget.classList.add('active');
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 </script>
