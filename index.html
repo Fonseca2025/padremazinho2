@@ -28,7 +28,7 @@
         /* Cabeçalho */
         header {
             background-color: var(--laranja);
-            padding: 60px 20px 80px;
+            padding: 50px 20px 70px;
             text-align: center;
         }
 
@@ -37,24 +37,24 @@
             align-items: center;
             background-color: white;
             border-radius: 60px;
-            padding: 8px 35px 8px 8px;
+            padding: 8px 30px 8px 8px;
             gap: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .img-perfil {
-            width: 70px; height: 70px;
+            width: 65px; height: 65px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--laranja);
         }
 
-        .texto-topo { color: var(--laranja); font-size: 1.6rem; font-weight: 700; margin: 0; }
+        .texto-topo { color: var(--laranja); font-size: 1.5rem; font-weight: 700; margin: 0; }
 
-        /* Menu de Navegação - IDÊNTICO AO PRINT */
+        /* Menu de Navegação */
         .nav-tabs {
             max-width: 650px;
-            margin: -35px auto 0;
+            margin: -30px auto 0;
             display: flex;
             background: white;
             border-radius: 40px;
@@ -64,20 +64,20 @@
         }
 
         .nav-btn {
-            flex: 1; border: none; background: none; padding: 15px;
+            flex: 1; border: none; background: none; padding: 12px;
             border-radius: 35px; cursor: pointer;
             font-weight: 600; color: #777; transition: 0.3s;
-            font-family: inherit; font-size: 0.95rem;
+            font-family: inherit; font-size: 0.9rem;
         }
 
         .nav-btn.active { background: var(--laranja); color: white; }
 
         /* Container de Conteúdo */
-        .container { max-width: 700px; margin: 40px auto; padding: 0 20px; }
+        .container { max-width: 700px; margin: 30px auto; padding: 0 15px; }
 
         .card {
-            background: white; padding: 40px; border-radius: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 30px;
+            background: white; padding: 35px 25px; border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 25px;
             display: none;
         }
 
@@ -88,55 +88,69 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        h2 { color: var(--laranja); font-size: 1.8rem; margin-top: 0; display: flex; align-items: center; gap: 10px; }
+        /* AJUSTE PARA O TÍTULO NO CELULAR */
+        h2 { 
+            color: var(--laranja); 
+            font-size: 1.8rem; 
+            margin-top: 0; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; /* Centraliza no celular */
+            text-align: center; 
+            gap: 12px;
+            flex-wrap: wrap; /* Faz o ícone e o texto quebrarem linha juntos se precisar */
+        }
 
-        /* Estilo da Caixa de Datas - IDÊNTICO AO PRINT */
+        /* Estilo da Caixa de Datas */
         .data-box {
             display: flex; justify-content: space-around; align-items: center;
-            background: #fffafa; padding: 30px 20px; border-radius: 15px;
-            margin: 30px 0; border: 1.5px dashed #f8a18a;
+            background: #fffafa; padding: 25px 15px; border-radius: 15px;
+            margin: 25px 0; border: 1.5px dashed #f8a18a;
         }
 
         .data-item { text-align: center; }
-        .data-label { font-size: 0.75rem; color: #f8a18a; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
-        .data-valor { font-size: 1.3rem; font-weight: 700; color: #2c3e50; }
-        .data-seta { color: var(--laranja); font-size: 1.5rem; }
+        .data-label { font-size: 0.7rem; color: #f8a18a; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 5px; }
+        .data-valor { font-size: 1.2rem; font-weight: 700; color: #2c3e50; }
+        .data-seta { color: var(--laranja); font-size: 1.3rem; }
 
-        /* Checklist - IDÊNTICO AO PRINT */
-        .vantagens { list-style: none; padding: 0; margin: 30px 0; }
-        .vantagens li { margin-bottom: 15px; display: flex; align-items: center; font-size: 1rem; color: #555; }
-        .vantagens i { color: var(--verde); margin-right: 12px; font-size: 1.2rem; }
+        /* Checklist */
+        .vantagens { list-style: none; padding: 0; margin: 25px 0; }
+        .vantagens li { margin-bottom: 12px; display: flex; align-items: center; font-size: 0.95rem; color: #555; }
+        .vantagens i { color: var(--verde); margin-right: 12px; font-size: 1.1rem; }
 
-        /* Slogan e Separador */
-        .slogan { text-align: center; font-style: italic; color: #f8a18a; margin: 40px 0; font-size: 1.1rem; }
-        hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
+        .slogan { text-align: center; font-style: italic; color: #f8a18a; margin: 30px 0; font-size: 1rem; }
+        hr { border: 0; border-top: 1px solid #eee; margin: 30px 0; }
 
         /* Botões */
         .btn-acao {
-            width: 100%; color: white; border: none; padding: 18px;
-            border-radius: 15px; font-weight: 700; font-size: 1.1rem; cursor: pointer;
+            width: 100%; color: white; border: none; padding: 16px;
+            border-radius: 15px; font-weight: 700; font-size: 1rem; cursor: pointer;
             text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;
             transition: 0.3s; box-sizing: border-box;
         }
 
         .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
         .btn-google { background-color: #4285F4; }
-        .btn-acao:hover { transform: scale(1.02); filter: brightness(1.1); }
 
         /* WhatsApp Flutuante */
         .whats-float {
-            position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
+            position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
             background-color: #25d366; color: white; border-radius: 50px;
             display: flex; align-items: center; justify-content: center;
-            font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000;
+            font-size: 28px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000;
             text-decoration: none;
         }
 
-        footer { text-align: center; padding: 50px 20px; color: #aaa; font-size: 0.9rem; }
+        footer { text-align: center; padding: 40px 20px; color: #aaa; font-size: 0.85rem; }
 
-        /* FAQ Estilo Acordeon */
-        details { background: var(--gelo); padding: 15px; border-radius: 12px; margin-bottom: 12px; cursor: pointer; }
-        summary { font-weight: 600; color: var(--azul-escuro); }
+        details { background: var(--gelo); padding: 12px; border-radius: 12px; margin-bottom: 10px; cursor: pointer; }
+        summary { font-weight: 600; font-size: 0.95rem; }
+
+        /* Media Query para telas muito pequenas */
+        @media (max-width: 400px) {
+            h2 { font-size: 1.5rem; }
+            .data-valor { font-size: 1rem; }
+        }
     </style>
 </head>
 <body>
@@ -159,7 +173,7 @@
     <!-- ABA 1: INFORMAÇÕES -->
     <section id="info" class="card active">
         <h2>🙏 Próxima Romaria</h2>
-        <p style="line-height: 1.6; color: #555;">Junte-se a nós para o <strong>Santuário do Bom Jesus da Lapa</strong>. Confira a data da nossa próxima saída:</p>
+        <p style="line-height: 1.6; color: #555; text-align: center;">Junte-se a nós para o <strong>Santuário do Bom Jesus da Lapa</strong>. Confira a data da nossa próxima saída:</p>
         
         <div class="data-box">
             <div class="data-item">
@@ -183,47 +197,36 @@
         
         <hr>
 
-        <p style="text-align: center; font-weight: 700; color: #2c3e50; margin-bottom: 20px;">Acompanhe nossas viagens pelo Instagram:</p>
+        <p style="text-align: center; font-weight: 700; color: #2c3e50; margin-bottom: 15px;">Acompanhe nossas viagens pelo Instagram:</p>
         <a href="https://www.instagram.com/romarias.padremazinho/" target="_blank" class="btn-acao btn-insta">
             <i class="fab fa-instagram"></i> Ver Fotos no Instagram
         </a>
     </section>
 
-    <!-- ABA 2: INSCRIÇÕES (LINK ATUALIZADO) -->
+    <!-- ABA 2: INSCRIÇÕES -->
     <section id="inscricao" class="card">
-        <h2>📝 Inscrição Online</h2>
-        <p style="color: #555; margin-bottom: 25px;">Clique no botão abaixo para preencher o formulário oficial e garantir sua reserva de vaga:</p>
-        
-        <!-- NOVO LINK DO GOOGLE FORMS ABAIXO -->
+        <h2 style="justify-content: center;">📝 Inscrição Online</h2>
+        <p style="text-align: center;">Clique abaixo para garantir sua reserva:</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK3uiWHzXCcXrCuJ9Nmfp0JnCwC3zic1best0CsbYFoLO9Yw/viewform?usp=header" target="_blank" class="btn-acao btn-google">
             <i class="fab fa-google"></i> ABRIR FORMULÁRIO DE INSCRIÇÃO
         </a>
-        
-        <p style="text-align: center; font-size: 0.85rem; color: #888; margin-top: 20px;">
-            <i class="fas fa-info-circle"></i> O formulário abrirá em uma nova janela de forma segura.
-        </p>
     </section>
 
     <!-- ABA 3: DÚVIDAS -->
     <section id="duvidas" class="card">
-        <h2>❓ Dúvidas Comuns</h2>
+        <h2 style="justify-content: center;">❓ Dúvidas Comuns</h2>
         <details>
             <summary>Como confirmo minha vaga?</summary>
-            <p style="padding-top:10px">Após preencher o formulário na aba "Inscrições", nossa equipe entrará em contato via WhatsApp para finalizar os detalhes.</p>
+            <p style="padding-top:10px; font-size: 0.9rem;">Preencha o formulário na aba "Inscrições" e entraremos em contato.</p>
         </details>
         <details>
             <summary>Quais as formas de pagamento?</summary>
-            <p style="padding-top:10px">Aceitamos PIX, transferência bancária ou parcelamento no cartão de crédito.</p>
-        </details>
-        <details>
-            <summary>O que está incluso no pacote?</summary>
-            <p style="padding-top:10px">Transporte em ônibus leito, hospedagem com pensão completa (café e jantar) e acompanhamento do Padre Mazinho.</p>
+            <p style="padding-top:10px; font-size: 0.9rem;">PIX, transferência ou cartão de crédito.</p>
         </details>
     </section>
 
 </div>
 
-<!-- WhatsApp Flutuante -->
 <a href="https://wa.me/5538999648992" class="whats-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
