@@ -14,7 +14,7 @@
             /* PANTONE 2164 C - Cor Principal */
             --primary: #51829B; 
             --primary-dark: #3d6377;
-            --laranja-logo: #f07151; /* Mantido para detalhes do logo */
+            --laranja-logo: #f07151; 
             --verde: #2ecc71;
             --azul-escuro: #2c3e50;
             --gelo: #f8f9fa;
@@ -35,23 +35,23 @@
             text-align: center;
         }
 
-        /* Cápsula do Logo igual ao print enviado */
+        /* Cápsula do Logo com foto à direita */
         .capsula-topo {
             display: inline-flex;
             align-items: center;
             background-color: white;
             border-radius: 60px;
-            padding: 10px 35px 10px 10px;
+            padding: 10px 10px 10px 35px; /* Padding maior à esquerda para o texto */
             gap: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 4px solid white; /* Borda branca externa */
+            border: 4px solid white;
         }
 
         .img-perfil {
             width: 75px; height: 75px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--laranja-logo); /* Círculo laranja ao redor da foto */
+            border: 3px solid var(--laranja-logo);
             background-color: white;
         }
 
@@ -114,7 +114,7 @@
 
         .data-box {
             display: flex; justify-content: space-around; align-items: center;
-            background: #f0f7f9; /* Fundo azulado leve */
+            background: #f0f7f9; 
             padding: 25px 15px; border-radius: 15px;
             margin: 25px 0; border: 1.5px dashed var(--primary);
         }
@@ -160,9 +160,9 @@
 
 <header>
     <div class="capsula-topo">
-        <!-- O logo agora vem antes do nome -->
-        <img src="perfil.jpeg" alt="Padre Mazinho" class="img-perfil">
+        <!-- Nome primeiro, Foto depois -->
         <h1 class="texto-topo">Padre Mazinho</h1>
+        <img src="perfil.jpeg" alt="Padre Mazinho" class="img-perfil">
     </div>
 </header>
 
