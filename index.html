@@ -11,7 +11,10 @@
     
     <style>
         :root {
-            --laranja: #f07151;
+            /* PANTONE 2164 C - Cor Principal */
+            --primary: #51829B; 
+            --primary-dark: #3d6377;
+            --laranja-logo: #f07151; /* Mantido para detalhes do logo */
             --verde: #2ecc71;
             --azul-escuro: #2c3e50;
             --gelo: #f8f9fa;
@@ -25,31 +28,40 @@
             scroll-behavior: smooth;
         }
 
-        /* Cabeçalho */
+        /* Cabeçalho com Pantone 2164 C */
         header {
-            background-color: var(--laranja);
+            background-color: var(--primary);
             padding: 50px 20px 70px;
             text-align: center;
         }
 
+        /* Cápsula do Logo igual ao print enviado */
         .capsula-topo {
             display: inline-flex;
             align-items: center;
             background-color: white;
             border-radius: 60px;
-            padding: 8px 30px 8px 8px;
+            padding: 10px 35px 10px 10px;
             gap: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 4px solid white; /* Borda branca externa */
         }
 
         .img-perfil {
-            width: 65px; height: 65px;
+            width: 75px; height: 75px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--laranja);
+            border: 3px solid var(--laranja-logo); /* Círculo laranja ao redor da foto */
+            background-color: white;
         }
 
-        .texto-topo { color: var(--laranja); font-size: 1.5rem; font-weight: 700; margin: 0; }
+        .texto-topo { 
+            color: var(--laranja-logo); 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
 
         /* Menu de Navegação */
         .nav-tabs {
@@ -70,7 +82,7 @@
             font-family: inherit; font-size: 0.9rem;
         }
 
-        .nav-btn.active { background: var(--laranja); color: white; }
+        .nav-btn.active { background: var(--primary); color: white; }
 
         /* Container de Conteúdo */
         .container { max-width: 700px; margin: 30px auto; padding: 0 15px; }
@@ -88,40 +100,37 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* AJUSTE PARA O TÍTULO NO CELULAR */
         h2 { 
-            color: var(--laranja); 
+            color: var(--primary); 
             font-size: 1.8rem; 
             margin-top: 0; 
             display: flex; 
             align-items: center; 
-            justify-content: center; /* Centraliza no celular */
+            justify-content: center;
             text-align: center; 
             gap: 12px;
-            flex-wrap: wrap; /* Faz o ícone e o texto quebrarem linha juntos se precisar */
+            flex-wrap: wrap;
         }
 
-        /* Estilo da Caixa de Datas */
         .data-box {
             display: flex; justify-content: space-around; align-items: center;
-            background: #fffafa; padding: 25px 15px; border-radius: 15px;
-            margin: 25px 0; border: 1.5px dashed #f8a18a;
+            background: #f0f7f9; /* Fundo azulado leve */
+            padding: 25px 15px; border-radius: 15px;
+            margin: 25px 0; border: 1.5px dashed var(--primary);
         }
 
         .data-item { text-align: center; }
-        .data-label { font-size: 0.7rem; color: #f8a18a; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 5px; }
-        .data-valor { font-size: 1.2rem; font-weight: 700; color: #2c3e50; }
-        .data-seta { color: var(--laranja); font-size: 1.3rem; }
+        .data-label { font-size: 0.7rem; color: var(--primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 5px; }
+        .data-valor { font-size: 1.2rem; font-weight: 700; color: var(--azul-escuro); }
+        .data-seta { color: var(--primary); font-size: 1.3rem; }
 
-        /* Checklist */
         .vantagens { list-style: none; padding: 0; margin: 25px 0; }
         .vantagens li { margin-bottom: 12px; display: flex; align-items: center; font-size: 0.95rem; color: #555; }
         .vantagens i { color: var(--verde); margin-right: 12px; font-size: 1.1rem; }
 
-        .slogan { text-align: center; font-style: italic; color: #f8a18a; margin: 30px 0; font-size: 1rem; }
+        .slogan { text-align: center; font-style: italic; color: var(--primary); margin: 30px 0; font-size: 1rem; }
         hr { border: 0; border-top: 1px solid #eee; margin: 30px 0; }
 
-        /* Botões */
         .btn-acao {
             width: 100%; color: white; border: none; padding: 16px;
             border-radius: 15px; font-weight: 700; font-size: 1rem; cursor: pointer;
@@ -129,10 +138,10 @@
             transition: 0.3s; box-sizing: border-box;
         }
 
+        .btn-primary { background-color: var(--primary); }
         .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
         .btn-google { background-color: #4285F4; }
 
-        /* WhatsApp Flutuante */
         .whats-float {
             position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
             background-color: #25d366; color: white; border-radius: 50px;
@@ -145,18 +154,13 @@
 
         details { background: var(--gelo); padding: 12px; border-radius: 12px; margin-bottom: 10px; cursor: pointer; }
         summary { font-weight: 600; font-size: 0.95rem; }
-
-        /* Media Query para telas muito pequenas */
-        @media (max-width: 400px) {
-            h2 { font-size: 1.5rem; }
-            .data-valor { font-size: 1rem; }
-        }
     </style>
 </head>
 <body>
 
 <header>
     <div class="capsula-topo">
+        <!-- O logo agora vem antes do nome -->
         <img src="perfil.jpeg" alt="Padre Mazinho" class="img-perfil">
         <h1 class="texto-topo">Padre Mazinho</h1>
     </div>
@@ -173,7 +177,7 @@
     <!-- ABA 1: INFORMAÇÕES -->
     <section id="info" class="card active">
         <h2>🙏 Próxima Romaria</h2>
-        <p style="line-height: 1.6; color: #555; text-align: center;">Junte-se a nós para o <strong>Santuário do Bom Jesus da Lapa</strong>. Confira a data da nossa próxima saída:</p>
+        <p style="line-height: 1.6; color: #555; text-align: center;">Junte-se a nós para o <strong>Santuário do Bom Jesus da Lapa</strong>. Confira a data da nossa próxima saída em <strong>2026</strong>:</p>
         
         <div class="data-box">
             <div class="data-item">
@@ -205,8 +209,8 @@
 
     <!-- ABA 2: INSCRIÇÕES -->
     <section id="inscricao" class="card">
-        <h2 style="justify-content: center;">📝 Inscrição Online</h2>
-        <p style="text-align: center;">Clique abaixo para garantir sua reserva:</p>
+        <h2 style="justify-content: center;">📝 Inscrição Online 2026</h2>
+        <p style="text-align: center; color: #555;">Clique abaixo para preencher o formulário oficial e garantir sua reserva:</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK3uiWHzXCcXrCuJ9Nmfp0JnCwC3zic1best0CsbYFoLO9Yw/viewform?usp=header" target="_blank" class="btn-acao btn-google">
             <i class="fab fa-google"></i> ABRIR FORMULÁRIO DE INSCRIÇÃO
         </a>
@@ -216,24 +220,25 @@
     <section id="duvidas" class="card">
         <h2 style="justify-content: center;">❓ Dúvidas Comuns</h2>
         <details>
-            <summary>Como confirmo minha vaga?</summary>
-            <p style="padding-top:10px; font-size: 0.9rem;">Preencha o formulário na aba "Inscrições" e entraremos em contato.</p>
+            <summary>Como confirmo minha vaga para 2026?</summary>
+            <p style="padding-top:10px; font-size: 0.9rem;">Preencha o formulário na aba "Inscrições" e nossa equipe entrará em contato via WhatsApp.</p>
         </details>
         <details>
             <summary>Quais as formas de pagamento?</summary>
-            <p style="padding-top:10px; font-size: 0.9rem;">PIX, transferência ou cartão de crédito.</p>
+            <p style="padding-top:10px; font-size: 0.9rem;">Aceitamos PIX, transferência ou parcelamento no cartão de crédito.</p>
         </details>
     </section>
 
 </div>
 
+<!-- WhatsApp Flutuante -->
 <a href="https://wa.me/5538999648992" class="whats-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
     <strong>Romarias Padre Mazinho</strong><br>
-    Bom Jesus da Lapa - Bahia | 2024
+    Bom Jesus da Lapa - Bahia | 2026
 </footer>
 
 <script>
